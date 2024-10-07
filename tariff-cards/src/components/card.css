@@ -1,0 +1,65 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+.card {
+  width: 200px;
+  height: 300px;
+  border: 2px solid black;
+  text-align: center;
+}
+/* first */
+.firstCard .title {
+  background-color: #229cab;
+  color: white;
+  padding: 10px;
+}
+.firstCard .cost {
+  background-color: #2cc1d5;
+  color: white;
+  padding: 30px;
+}
+/* second */
+.secondCard .title {
+  background-color: #1e876e;
+  color: white;
+  padding: 10px;
+}
+.secondCard .cost {
+  background-color: #25ad8d;
+  color: white;
+  padding: 30px;
+}
+/* third */
+.thirdCard .title {
+  background-color: #c4554e;
+  color: white;
+  padding: 10px;
+}
+.thirdCard .cost {
+  background-color: #f46a5f;
+  color: white;
+  padding: 30px;
+}
+/* fourth */
+.fourthCard .title {
+  background-color: #282f37;
+  color: white;
+  padding: 10px;
+}
+.fourthCard .cost {
+  background-color: #333a44;
+  color: white;
+  padding: 30px;
+}
+
+.speed,
+.info {
+  margin: 0 0 10px;
+  padding: 15px;
+}

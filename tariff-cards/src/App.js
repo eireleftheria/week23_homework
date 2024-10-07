@@ -1,24 +1,29 @@
 import React from "react";
-import "./App.css";
+import "./components/card.css";
 import tariffData from "./data";
 import Card from "./components/Card.jsx";
 
 function App() {
-  const titleColorClasses = ["title1", "title2", "title3", "title4"];
-  const costColorClasses = ["cost1", "cost2", "cost3", "cost4"];
+  function getColor(index) {
+    switch (index) {
+      case 0:
+        return "firstCard";
+      case 1:
+        return "secondCard";
+      case 2:
+        return "thirdCard";
+      case 3:
+        return "fourthCard";
+      default:
+        return "defaultCard";
+    }
+  }
 
   return (
-    <div className="card-container">
-      {tariffData.map((tariff, index) => (
-        <Card
-          title={tariff.title}
-          cost={tariff.cost}
-          speed={tariff.speed}
-          info={tariff.info}
-          titleColorClass={titleColorClasses[index % titleColorClasses.length]}
-          costColorClass={costColorClasses[index % costColorClasses.length]}
-        />
-      ))}
+    <div className="App">
+      {tariffData.map((tariff, index) => {
+        return <Card color={getColor(index)} card={tariff} key={tariff.id} />;
+      })}
     </div>
   );
 }
